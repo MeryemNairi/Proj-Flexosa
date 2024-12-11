@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --primary-color: #1a76d1;
+  --secondary-color: #00a0c8;
+  --accent-color: #ffc107;
+  --text-color: #333333;
+  --background-color: #f8f9fa;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white py-3 px-8 rounded-full font-semibold hover:bg-blue-700 transition duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white text-blue-600 py-3 px-8 rounded-full font-semibold border border-blue-600 hover:bg-blue-50 transition duration-300;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-center mb-12 relative;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 w-20 h-1 bg-blue-600 transform -translate-x-1/2 mt-2;
+}
+
+/* Add these new styles */
+.feature-icon {
+  @apply text-4xl text-blue-600 mb-4;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+.text-primary {
+  @apply text-blue-600;
+}
+
+.bg-primary {
+  @apply bg-blue-600;
+}
+
